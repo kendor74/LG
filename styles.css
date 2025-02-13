@@ -54,9 +54,9 @@
     background-color: var(--primary-color)
 }
 
-@supports(scrollbar-color:var(--primary-dark) var(--secondary-black)) {
+@supports(scrollbar-color:#C0C0C0) {
     * {
-        scrollbar-color: var(--primary-dark) var(--secondary-black)
+        scrollbar-color: #C0C0C0
     }
 }
 
@@ -208,7 +208,7 @@ ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #0cf;
+    background-color: #C0C0C0;
     color: var(--secondary-color);
     -webkit-transition: width .3s ease, background-color .3s ease;
     transition: width .3s ease, background-color .3s ease;
@@ -218,7 +218,7 @@ ul {
 
 .tel-link:hover {
     width: 170px;
-    background-color: #0ff;
+    background-color: #A50034;
     color: var(--secondary-color)
 }
 
@@ -784,75 +784,106 @@ section.testos h2 {
     background: var(--primary-color)
 }
 
+/* Footer General Styling */
 footer {
-    background-color: #29000c;
+    background-color: #3A3A3A; /* Dark Gray */
     color: white;
     text-align: center;
     padding: 30px 20px;
     direction: rtl;
-  }
-  
-  .footer-container {
+    font-family: Arial, sans-serif;
+}
+
+/* Container Layout */
+.footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
     max-width: 1200px;
     margin: auto;
-    align-items: center;
-  }
-  
-  .footer-hotline {
-    background-color: #f1c40f;
-    color: black;
-    padding: 15px 30px;
+}
+
+/* Hotline Box */
+.footer-hotline {
+    background-color: #A50034; /* LG Red */
+    color: white;
+    padding: 20px 40px;
     border-radius: 10px;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-  }
-  
-  .footer-hotline p {
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .hotline-number {
+    transition: background 0.3s ease-in-out;
+}
+
+.footer-hotline a {
     display: block;
     font-size: 30px;
     font-weight: bold;
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .hotline-number:hover {
-    color: #222;
-  }
-  
-  .footer-contact {
-    text-align: right;
-  }
-  
-  .footer-contact h3 {
-    color: #f1c40f;
-  }
-  
-  .footer-contact a {
     color: white;
     text-decoration: none;
-  }
-  
-  .footer-contact a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-hotline:hover {
+    background-color: #8B002E; /* Darker LG Red */
+}
+
+/* Contact Info */
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact h3 {
+    color: #f1c40f; /* Gold Accent */
+    font-size: 22px;
+}
+
+.footer-contact p {
+    font-size: 18px;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+    color: #C0C0C0; /* Silver */
+}
+
+/* Phone Icon Styling */
+.footer-contact p::before {
+    color: #A50034; /* LG Red */
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+/* Bottom Copyright */
+.footer-bottom {
     margin-top: 20px;
     font-size: 14px;
     color: #bbb;
-  }
-  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+
+    .footer-hotline {
+        width: 80%;
+        margin: auto;
+    }
+}
 
 
 @media only screen and (max-height:760px) {
