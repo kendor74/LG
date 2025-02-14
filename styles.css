@@ -869,7 +869,19 @@ footer {
     font-size: 14px;
     color: #bbb;
 }
-
+.footer-links {
+    margin-top: 15px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+  }
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
